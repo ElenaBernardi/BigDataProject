@@ -1,6 +1,0 @@
-#!/bin/bash
-
-java -jar /home/vagrant/projects/b-simple-consumer/build/libs/b-simple-consumer.jar $1 $2
-      
-  
- 
