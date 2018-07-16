@@ -1,0 +1,61 @@
+# 
+# Vagrantfile che prevedere
+# - installazione di hadoop
+# - installazione di spark
+# - installazione di hbase
+
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    # Configurazioni comuni.
+
+    # Ubuntu 16.04 LTS 64 bit VirtualBox (Bento)
+    config.vm.box = "bento/ubuntu-16.04"
+    # config.vm.box_url = "https://app.vagrantup.com/bento/boxes/ubuntu-16.04"
+
+    # folder per i progetti BigData (/home/bigData/projects)
+    config.vm.synced_folder "../../projects/", "/home/bigData/projects/", :mount_options => ["dmode=777", "fmode=777"]
+
+    # folder per le risorse condivise per gli ambienti BigData (/home/bigData/_shared/resources e /home/bigData/_shared/scripts) 
+    config.vm.synced_folder "../_shared/", "/home/bigData/_shared", :mount_options => ["dmode=777", "fmode=777"]
+
+    #
+    # Configurazione del nodo che prevede: 
+    # - Oracle Java SDK 8 
+    # - Zookeeper 3.4.10
+    # - Kafka 1.0.1
+    #
+    config.vm.define "node" do |node|
+        node.vm.hostname = "node"    
+        node.vm.network "private_network", ip: "10.11.1.101", virtualbox__intnet: true
+
+        node.vm.provider "virtualbox" do |v| 
+            v.memory = 1536 
+            v.cpus = 1
+        end 
+
+        
+        # provisioning con bash 
+        node.vm.provision :shell, :inline => 'apt-get update'
+        node.vm.provision :shell, path: "../_shared/scripts/setup-java.sh"
+        node.vm.provision :shell, path: "../_shared/scripts/setup-gradle.sh"
+        node.vm.provision :shell, path: "../_shared/scripts/setup-kafka.sh"
+        node.vm.provision :shell, path:"../_shared/scripts/setup-zookeeper.sh"
+        node.vm.provision :shell, :privileged => false, path:"../_shared/scripts/setup-hadoop.sh"
+        node.vm.provision :shell, :privileged => false, path:"../_shared/scripts/setup-spark.sh" 
+        node.vm.provision :shell, :privileged => false, path:"../_shared/scripts/setup-hbase.sh"
+
+        node.vm.provision :shell, :inline => "echo '10.11.1.101 node' >> /etc/hosts"
+        
+
+  
+        # crea un link simbolico alla cartella dei progetti bigData nella cartella dell'utente di default 
+        node.vm.provision :shell, :inline => 'ln -s /home/bigData/projects projects'
+
+        node.vm.provision :shell, 
+            inline: "echo  'configurazione nodo node completata'"
+
+    end
+
+end
