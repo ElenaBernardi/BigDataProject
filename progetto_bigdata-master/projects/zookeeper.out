@@ -1,0 +1,56 @@
+2018-07-16 09:18:45,504 [myid:] - INFO  [main:QuorumPeerConfig@134] - Reading configuration from: /usr/local/zookeeper/bin/../conf/zoo.cfg
+2018-07-16 09:18:45,517 [myid:] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2018-07-16 09:18:45,517 [myid:] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2018-07-16 09:18:45,518 [myid:] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2018-07-16 09:18:45,518 [myid:] - WARN  [main:QuorumPeerMain@113] - Either no config or no quorum defined in config, running  in standalone mode
+2018-07-16 09:18:45,539 [myid:] - INFO  [main:QuorumPeerConfig@134] - Reading configuration from: /usr/local/zookeeper/bin/../conf/zoo.cfg
+2018-07-16 09:18:45,540 [myid:] - INFO  [main:ZooKeeperServerMain@96] - Starting server
+2018-07-16 09:18:45,560 [myid:] - INFO  [main:Environment@100] - Server environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2018-07-16 09:18:45,560 [myid:] - INFO  [main:Environment@100] - Server environment:host.name=node
+2018-07-16 09:18:45,561 [myid:] - INFO  [main:Environment@100] - Server environment:java.version=1.8.0_171
+2018-07-16 09:18:45,561 [myid:] - INFO  [main:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2018-07-16 09:18:45,561 [myid:] - INFO  [main:Environment@100] - Server environment:java.home=/usr/local/jdk1.8.0_171/jre
+2018-07-16 09:18:45,562 [myid:] - INFO  [main:Environment@100] - Server environment:java.class.path=/usr/local/zookeeper/bin/../build/classes:/usr/local/zookeeper/bin/../build/lib/*.jar:/usr/local/zookeeper/bin/../lib/slf4j-log4j12-1.6.1.jar:/usr/local/zookeeper/bin/../lib/slf4j-api-1.6.1.jar:/usr/local/zookeeper/bin/../lib/netty-3.10.5.Final.jar:/usr/local/zookeeper/bin/../lib/log4j-1.2.16.jar:/usr/local/zookeeper/bin/../lib/jline-0.9.94.jar:/usr/local/zookeeper/bin/../zookeeper-3.4.10.jar:/usr/local/zookeeper/bin/../src/java/lib/*.jar:/usr/local/zookeeper/bin/../conf:
+2018-07-16 09:18:45,562 [myid:] - INFO  [main:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2018-07-16 09:18:45,562 [myid:] - INFO  [main:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2018-07-16 09:18:45,563 [myid:] - INFO  [main:Environment@100] - Server environment:java.compiler=<NA>
+2018-07-16 09:18:45,566 [myid:] - INFO  [main:Environment@100] - Server environment:os.name=Linux
+2018-07-16 09:18:45,566 [myid:] - INFO  [main:Environment@100] - Server environment:os.arch=amd64
+2018-07-16 09:18:45,567 [myid:] - INFO  [main:Environment@100] - Server environment:os.version=4.4.0-87-generic
+2018-07-16 09:18:45,568 [myid:] - INFO  [main:Environment@100] - Server environment:user.name=root
+2018-07-16 09:18:45,568 [myid:] - INFO  [main:Environment@100] - Server environment:user.home=/root
+2018-07-16 09:18:45,568 [myid:] - INFO  [main:Environment@100] - Server environment:user.dir=/home/bigData/projects
+2018-07-16 09:18:45,580 [myid:] - INFO  [main:ZooKeeperServer@829] - tickTime set to 2000
+2018-07-16 09:18:45,581 [myid:] - INFO  [main:ZooKeeperServer@838] - minSessionTimeout set to -1
+2018-07-16 09:18:45,581 [myid:] - INFO  [main:ZooKeeperServer@847] - maxSessionTimeout set to -1
+2018-07-16 09:18:45,607 [myid:] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2018-07-16 09:18:47,940 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /0:0:0:0:0:0:0:1:37268
+2018-07-16 09:18:47,958 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /0:0:0:0:0:0:0:1:37268
+2018-07-16 09:18:47,961 [myid:] - INFO  [SyncThread:0:FileTxnLog@203] - Creating new log file: log.1
+2018-07-16 09:18:47,975 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@687] - Established session 0x164a2628f7a0000 with negotiated timeout 6000 for client /0:0:0:0:0:0:0:1:37268
+2018-07-16 09:18:48,047 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x5 zxid:0x3 txntype:-1 reqpath:n/a Error Path:/brokers Error:KeeperErrorCode = NoNode for /brokers
+2018-07-16 09:18:48,080 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0xb zxid:0x7 txntype:-1 reqpath:n/a Error Path:/config Error:KeeperErrorCode = NoNode for /config
+2018-07-16 09:18:48,095 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x13 zxid:0xc txntype:-1 reqpath:n/a Error Path:/admin Error:KeeperErrorCode = NoNode for /admin
+2018-07-16 09:18:48,404 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x1f zxid:0x13 txntype:-1 reqpath:n/a Error Path:/cluster Error:KeeperErrorCode = NoNode for /cluster
+2018-07-16 09:18:49,691 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:setData cxid:0x2a zxid:0x17 txntype:-1 reqpath:n/a Error Path:/controller_epoch Error:KeeperErrorCode = NoNode for /controller_epoch
+2018-07-16 09:18:49,934 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:delete cxid:0x41 zxid:0x1a txntype:-1 reqpath:n/a Error Path:/admin/preferred_replica_election Error:KeeperErrorCode = NoNode for /admin/preferred_replica_election
+2018-07-16 09:18:50,007 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x4b zxid:0x1b txntype:-1 reqpath:n/a Error Path:/brokers Error:KeeperErrorCode = NodeExists for /brokers
+2018-07-16 09:18:50,009 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x4c zxid:0x1c txntype:-1 reqpath:n/a Error Path:/brokers/ids Error:KeeperErrorCode = NodeExists for /brokers/ids
+2018-07-16 09:22:15,858 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /127.0.0.1:55004
+2018-07-16 09:22:15,864 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /127.0.0.1:55004
+2018-07-16 09:22:15,867 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@687] - Established session 0x164a2628f7a0001 with negotiated timeout 30000 for client /127.0.0.1:55004
+2018-07-16 09:22:16,115 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0001 type:setData cxid:0x4 zxid:0x1f txntype:-1 reqpath:n/a Error Path:/config/topics/test Error:KeeperErrorCode = NoNode for /config/topics/test
+2018-07-16 09:22:16,128 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0001 type:create cxid:0x6 zxid:0x20 txntype:-1 reqpath:n/a Error Path:/config/topics Error:KeeperErrorCode = NodeExists for /config/topics
+2018-07-16 09:22:16,166 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@486] - Processed session termination for sessionid: 0x164a2628f7a0001
+2018-07-16 09:22:16,168 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1044] - Closed socket connection for client /127.0.0.1:55004 which had sessionid 0x164a2628f7a0001
+2018-07-16 09:22:16,200 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x57 zxid:0x24 txntype:-1 reqpath:n/a Error Path:/brokers/topics/test/partitions/0 Error:KeeperErrorCode = NoNode for /brokers/topics/test/partitions/0
+2018-07-16 09:22:16,202 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0000 type:create cxid:0x58 zxid:0x25 txntype:-1 reqpath:n/a Error Path:/brokers/topics/test/partitions Error:KeeperErrorCode = NoNode for /brokers/topics/test/partitions
+2018-07-16 09:25:08,259 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /0:0:0:0:0:0:0:1:37418
+2018-07-16 09:25:08,265 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /127.0.0.1:55152
+2018-07-16 09:25:08,279 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /127.0.0.1:55152
+2018-07-16 09:25:08,282 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@687] - Established session 0x164a2628f7a0002 with negotiated timeout 40000 for client /127.0.0.1:55152
+2018-07-16 09:25:08,298 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /0:0:0:0:0:0:0:1:37418
+2018-07-16 09:25:08,300 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@687] - Established session 0x164a2628f7a0003 with negotiated timeout 40000 for client /0:0:0:0:0:0:0:1:37418
+2018-07-16 09:25:13,729 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@648] - Got user-level KeeperException when processing sessionid:0x164a2628f7a0002 type:delete cxid:0x1e zxid:0x37 txntype:-1 reqpath:n/a Error Path:/hbase/rs/node,16000,1531733099268 Error:KeeperErrorCode = NoNode for /hbase/rs/node,16000,1531733099268
+2018-07-16 09:25:13,732 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@486] - Processed session termination for sessionid: 0x164a2628f7a0002
+2018-07-16 09:25:13,735 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1044] - Closed socket connection for client /127.0.0.1:55152 which had sessionid 0x164a2628f7a0002

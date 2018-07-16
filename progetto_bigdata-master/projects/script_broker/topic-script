@@ -1,0 +1,31 @@
+#!/bin/bash
+KAFKA_PATH=/usr/local/kafka
+
+# Check that networking is up.
+#[ ${NETWORKING} = "no" ] && exit 0
+
+
+
+# See how we were called.
+case "$1" in
+  nuova)
+        # Start daemon.
+        echo "Creazione topic $3 con un numero di partizioni pari a $2";
+        ${KAFKA_PATH}/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions $2 --topic $3
+        ;;
+  cancella)
+        echo "Cancellazione del topic $2"
+        ${KAFKA_PATH}/bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic $2
+        ;;
+  lista)
+        echo "Lista dei topic presenti:"
+        ${KAFKA_PATH}/bin/kafka-topics.sh --list --zookeeper localhost:2181
+        
+        ;;
+  
+  *)
+        echo "Usage: $0 {nuova|cancella|lista}"
+        exit 1
+esac
+
+exit 0

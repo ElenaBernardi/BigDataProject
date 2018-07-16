@@ -1,0 +1,30 @@
+#!/bin/bash
+#DAEMON_PATH=/home/vagrant/projects/script_broker/kafka
+#DAEMON_NAME=kafka
+# Check that networking is up.
+#[ ${NETWORKING} = "no" ] && exit 0
+
+KAFKA_PATH=/usr/local/kafka
+ZOOKEEPER_PATH=/usr/local/zookeeper
+
+# See how we were called.
+case "$1" in
+  start)
+        # Start daemon.
+        echo "Starting Zookeeper and Kafka";
+        sudo ${ZOOKEEPER_PATH}/bin/zkServer.sh start
+        echo "Starting kafka ... STARTED"
+        nohup ${KAFKA_PATH}/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
+        ;;
+  stop)
+        # Stop daemons.
+        echo "Shutting down Zookeeper and Kafka";
+        ${KAFKA_PATH}/bin/kafka-server-stop.sh
+        sudo ${ZOOKEEPER_PATH}/bin/zkServer.sh stop
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        
+esac
+exit 0

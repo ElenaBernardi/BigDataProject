@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+
+
+
+# Start daemon.
+java -jar /home/vagrant/projects/f-multiple-producers-consumers/build/libs/f-multiple-producers-consumers.jar $1 $2
+      
+  
+ 
