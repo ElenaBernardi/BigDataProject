@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="progetto_bigdata-master/environments/_shared/files/hbase-0.90.2.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/environments/_shared/files/kafka_2.11-0.10.0.1.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/environments/_shared/files/kafka-clients-0.10.0.1.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/environments/_shared/files/spark-streaming-kafka-0-10_2.11-2.3.1.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/projects/a-simple-producer/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/projects/b-simple-consumer/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/projects/e-simple-filter/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/projects/example2.jar"/>
+	<classpathentry kind="lib" path="progetto_bigdata-master/projects/f-multiple-producers-consumers/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="progetto_bigdata-master/projects/a-simple-producer/bin"/>
+</classpath>
