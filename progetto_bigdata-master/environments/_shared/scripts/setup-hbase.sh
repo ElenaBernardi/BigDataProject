@@ -2,9 +2,9 @@
 
 source "/home/bigData/_shared/scripts/common.sh"
 
-HBASE_VERSION=2.0.1
+HBASE_VERSION=1.4.5
 HBASE_ARCHIVE=hbase-${HBASE_VERSION}-bin.tar.gz
-GET_HBASE_URL=http://it.apache.contactlab.it/hbase/2.0.1/hbase-2.0.1-bin.tar.gz
+GET_HBASE_URL=http://archive.apache.org/dist/hbase/1.4.5/hbase-1.4.5-bin.tar.gz
 HBASE_PATH=/url/local/hbase
 
 function installHbase {
@@ -45,6 +45,7 @@ function editingFiles {
 	sudo cp ${BIGDATA_FILES}/hbase-env.sh /usr/local/hbase/conf/hbase-env.sh
 	sudo cp ${BIGDATA_FILES}/hbase-site.xml /usr/local/hbase/conf/hbase-site.xml 
 }
+
 
 echo "---setup hbase---"
 installHbase
